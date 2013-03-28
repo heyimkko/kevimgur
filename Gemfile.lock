@@ -15,6 +15,7 @@ GEM
     arel (3.0.2)
     aws_cf_signer (0.1.1)
     backports (2.6.1)
+    bcrypt-ruby (3.0.1)
     builder (3.0.4)
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
@@ -71,6 +72,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activesupport
+  bcrypt-ruby
   carrierwave
   cloudinary
   faker

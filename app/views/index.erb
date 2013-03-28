@@ -11,4 +11,8 @@
 <% else %>
   <h1>Welcome to Kevimgur</h1>
   <p>Please Sign up or Log in to upload photos</p>
+
+  <%= erb :_signup_form, :layout => false %>
+
+  <%= erb :_login_form, :layout => false %>
 <% end %>
