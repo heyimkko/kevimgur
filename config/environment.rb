@@ -16,6 +16,7 @@ require 'active_record'
 require 'logger'
 
 require 'carrierwave'
+require 'carrierwave/orm/activerecord'
 require 'cloudinary'
 
 require 'sinatra'
@@ -37,6 +38,11 @@ require APP_ROOT.join('config', 'database')
 
 # Set up Cloudinary (in development). In production, we'll use "heroku config:add"
 # in order to set things up.
+
+CarrierWave.configure do |config|
+  config.root = "#{APP_ROOT}/public"
+  config.store_dir = "#{config.root}/uploads"
+end
 
 if development?
   cloudinary_config = YAML.load(File.read(APP_ROOT.join("config", "cloudinary.yml")))
