@@ -1,26 +1,14 @@
-<style type="text/css">
-  .container {
-    margin: 20px auto;
-    width: 600px;
-    padding: 0px 20px 20px 20px;
-    border: 1px dotted black;
-  }
-  th {
-    text-align: left;
-  }
-</style>
-
-<div class="container">
+<% if current_user %>
   <h1>Try uploading</h1>
   <p>Fancy Cloudinary upload:</p>
   <p>
-
-
     <form method = "post" action="/" enctype="multipart/form-data">
     <p>CarrierWave Upload:</p> 
     <p>
     <input type="file" name='photo' value='picture' required>
     <input type="submit" value="Upload!">
   </p>
-
-</div>
+<% else %>
+  <h1>Welcome to Kevimgur</h1>
+  <p>Please Sign up or Log in to upload photos</p>
+<% end %>
