@@ -1,0 +1,54 @@
+
+body{font:14px verdana,"helvetica neue",helvetica,arial,sans-serif;height:100%;text-shadow:1px 1px #FFF;min-width:1062px}
+
+.png{behavior:url(/static/javascripts/PIE.htc);-pie-png-fix:true}.clear{clear:both}
+
+#container{width:940px;margin:0 auto;padding-bottom:30px;position:relative}
+
+#lang{padding:15px;text-align:center;z-index:10}
+
+#lang li{display:inline;padding:5px}
+
+
+#lang a{color:#b8b8b8}#lang a:hover,#lang 
+
+a:active{color:#AAA}#footer{clear:both;margin-top:25px;padding:15px;border-top:2px solid #dfdfdf;position:relative}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer .social{position:absolute;top:15px;right:5px;display:inline}
+
+#footer .social li{display:inline;padding-right:10px}
+
+#footer .social a{display:inline-block;width:204px;height:30px;background-repeat:no-repeat;background-position:left top}
+
+#footer .social a span{display:none}
+
+#footer .social .facebook a{background-image:url(../images/facebook.png)}
+
+#footer .social .twitter a{background-image:url(../images/twitter.png)}
+
+
+#copyright{color:#999}
+
+#copyright .o{color:#f6921e;text-shadow:1px 1px #ffe3c2}
+
+#copyright .l1{color:#9c3;text-shadow:1px 1px #e5f2cc}
+
+
+#copyright .l2{color:#39f;text-shadow:1px 1px #dfefff}
+
+#copyright .i{color:#ff80c0;text-shadow:1px 1px #ffe7f3}
+
+#copyright .x{color:#fc0;text-shadow:1px 1px #fff2bf}

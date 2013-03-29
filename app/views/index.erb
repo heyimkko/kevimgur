@@ -1,18 +1,39 @@
-<% if current_user %>
-  <h1>Try uploading</h1>
-  <p>Fancy Cloudinary upload:</p>
-  <p>
-    <form method = "post" action="/" enctype="multipart/form-data">
-    <p>CarrierWave Upload:</p> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/upload.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+  <title>Kevimgur</title>
+</head>
+<body>
+  <% if current_user %>
+  <div id="drop_zone">
+  
+    <h1 class="main">Simcha</h1>
+    <h2 class="main">Drag your file(s) in.</p>
     <p>
-    <input type="file" name='photo' value='picture' required>
-    <input type="submit" value="Upload!">
-  </p>
-<% else %>
-  <h1>Welcome to Kevimgur</h1>
-  <p>Please Sign up or Log in to upload photos</p>
+  <output id="list"></output>
+    </p>
+    <!-- <p>Fancy Cloudinary upload:</p>
+    <p>
+      <form method = "post" action="/" enctype="multipart/form-data">
+      <p>CarrierWave Upload:</p> 
+      <p>
+      <input type="file" name='photo' value='picture' required>
+      <input type="submit" value="Upload!">
+    </p> -->
+  </div>
+  <% else %>
+    <h1>Welcome to Kevimgur</h1>
+    <p>Please Sign up or Log in to upload photos</p>
 
-  <%= erb :_signup_form, :layout => false %>
+    <%= erb :_signup_form, :layout => false %>
 
-  <%= erb :_login_form, :layout => false %>
-<% end %>
+    <%= erb :_login_form, :layout => false %>
+  <% end %>
+</body>
+</html>

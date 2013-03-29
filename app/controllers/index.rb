@@ -1,5 +1,7 @@
 get '/' do
-  erb :index
+
+
+  erb :index, :layout => false
 end
 
 post '/' do
@@ -42,9 +44,6 @@ post '/login' do
 end
 
 post '/signup' do
-  puts "%" * 100
-  puts params
-  puts "%" * 100
   @user = User.new(params[:user])
   puts params[:password]
   unless @user.save
