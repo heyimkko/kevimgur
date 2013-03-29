@@ -7,7 +7,7 @@ end
 post '/' do
   # post.update_attributes(params[:post])
   puts "%" * 100
-  puts params
+  puts params.inspect
   puts "%" * 100
 
   p = Photo.new
