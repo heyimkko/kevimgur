@@ -14,12 +14,19 @@
   <div id="drop_zone">
     <div class="main_content">
     <h1 class="main">Simcha</h1>
-    <h2 class="main">Please drag in your photo(s).</h2>
+    <h2 class="main">Please drag in your photo.</h2>
     <ul>
-    <output id="list">
-    </output>
-  </div>
-  </ul>
+      <form method="post" action="/" enctype="multipart/form-data">
+      <input type="file" id="files" name="photo">
+      <output id="list">
+      </output>
+      <input type="submit" value="Ok, let's go.">
+      </form>
+    </div>
+    </ul>
+    <div class="loader">
+      <img src="/loader.gif">
+    </div>
     <!-- </p> -->
     <!-- <p>Fancy Cloudinary upload:</p>
     <p>

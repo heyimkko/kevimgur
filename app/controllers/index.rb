@@ -6,7 +6,10 @@ end
 
 post '/' do
   # post.update_attributes(params[:post])
-
+  puts "%" * 100
+  puts params
+  puts "%" * 100
+  
   p = Photo.new
   p.photo_string = params['photo']
   p.user_id = current_user.id

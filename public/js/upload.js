@@ -1,14 +1,14 @@
 $(document).ready(function(){
+  $('.loader').hide();
 
-  function handleFileSelect(evt) {
-      evt.stopPropagation();
-      evt.preventDefault();
+// Drag and Drop
+  function handleFileSelect(e) {
+      e.stopPropagation();
+      e.preventDefault();
 
-      var files = evt.dataTransfer.files; // FileList object.
-
+      var files = e.dataTransfer.files; // FileList object.
       // files is a FileList of File objects. List some properties.
       var output = [];
-      
       for (var i = 0, f; f = files[i]; i++) {
         
         output.push(
@@ -20,25 +20,43 @@ $(document).ready(function(){
       document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
 
       $('#drop_zone').removeClass('over');
-    }
+
+  // File Upload
+
+    var data = files
+
+    // $('form').submit(function(e){
+    //   e.preventDefault();
+    //   console.log(data);
+    //   $.ajax({
+    //     url: '/',
+    //     method: 'post',
+    //     data: {photo: files}
+    //   }).done(function(){
+    //     $('.loader').show();
+    //     $('#drop_zone').css("opacity", '0.3');
+    //   }).fail(function(){
+    //     console.log("FAIL");
+    //   })
+    // });
+
+  }
 
   function handleDragOver(e) {
     e.stopPropagation();
     e.preventDefault();
-    e.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+    e.dataTransfer.dropEffect = 'copy';
   }
 
   function handleDragEnter(e) {
-  // this / e.target is the current hover target.
   this.classList.add('over');
   }
 
   function handleDragLeave(e) {
-  this.classList.remove('over');  // this / e.target is previous target element.
+  this.classList.remove('over');
   }
   
   function handleDragEnd(e) {
-  // this/e.target is the source node.
   $('#drop_zone').removeClass('over');
   }
 
