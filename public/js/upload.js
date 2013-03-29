@@ -1,5 +1,27 @@
 $(document).ready(function(){
   $('.loader').hide();
+  $('.submit_button').hide();
+
+  // // File Upload
+
+  // var formElement = document.getElementById("form");
+  // var newFormData = new FormData(formElement)
+
+  $('form').submit(function(e){
+    e.preventDefault();
+    console.log(window.files);
+    $.ajax({
+      type: 'post',
+      url: '/',
+      data: window.files,
+      processData: false
+    }).done(function(data){
+      $('.loader').show();
+      $('#drop_zone').css("opacity", '0.3');
+    }).fail(function(){
+      console.log("FAIL");
+    })
+  });
 
 // Drag and Drop
   function handleFileSelect(e) {
@@ -7,6 +29,7 @@ $(document).ready(function(){
       e.preventDefault();
 
       var files = e.dataTransfer.files; // FileList object.
+      window.files = files
       // files is a FileList of File objects. List some properties.
       var output = [];
       for (var i = 0, f; f = files[i]; i++) {
@@ -20,26 +43,7 @@ $(document).ready(function(){
       document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
 
       $('#drop_zone').removeClass('over');
-
-  // File Upload
-
-    var data = files
-
-    // $('form').submit(function(e){
-    //   e.preventDefault();
-    //   console.log(data);
-    //   $.ajax({
-    //     url: '/',
-    //     method: 'post',
-    //     data: {photo: files}
-    //   }).done(function(){
-    //     $('.loader').show();
-    //     $('#drop_zone').css("opacity", '0.3');
-    //   }).fail(function(){
-    //     console.log("FAIL");
-    //   })
-    // });
-
+      $('.submit_button').show();
   }
 
   function handleDragOver(e) {

@@ -15,7 +15,7 @@ post '/' do
   p.user_id = current_user.id
   p.save!
 
-  Cloudinary::Uploader.upload(params['photo'], options = {})
+  Cloudinary::Uploader.upload(params['photo'][:filename], :public_id => 'mcchillinstaburger29323')
 
   redirect "/i/#{p.short_url}"
 end
