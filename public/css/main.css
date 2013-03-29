@@ -6,11 +6,17 @@ body {
   text-shadow:1px 1px #FFF;
 }
 
+.main_content {
+  width: 300px;
+  margin: 0px auto;
+  margin-top: 20%;
+}
+
 h1.main {
   font-family: 'Lobster';
   color: #91C46C;
   font-size: 3em;
-  margin: 20% 0px 0px 0px;
+  margin: 0px;
   text-align: center;
   /*display: inline-block;*/
 }
@@ -55,10 +61,11 @@ nav {
 }
 
 ul {
-  padding-left: 20%;
+  margin: 0px;
+  padding: 0px;
 }
 
-li {
+li#main {
   text-align: left;
   font:14px 'Lato',verdana,helvetica,arial,sans-serif;
   list-style: none;

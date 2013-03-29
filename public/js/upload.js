@@ -12,9 +12,8 @@ $(document).ready(function(){
       for (var i = 0, f; f = files[i]; i++) {
         
         output.push(
-          '<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-                    f.size, ' bytes, last modified: ',
-                    f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+          '<li id="main"><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                    f.size, ' bytes',
                     '</li>'
                     );
       }
