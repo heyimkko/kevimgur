@@ -10,7 +10,12 @@
 </head>
 <body>
   <nav>
-    Test Stuff
+    <li id="logo"><a href="/">Simcha</a></li>
+    <ul class="nav">
+      <% if current_user %>
+      <li>Hi, <a href="/user/<%= current_user.id %>"><%= current_user.username %></a> <a href="/signout">[x]</a></li>
+      <% end %>
+    </ul>
   </nav>
   <div class="container">
     <%= yield %>

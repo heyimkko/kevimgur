@@ -30,8 +30,9 @@ h2.main {
 }
 
 .container {
-  margin: 20px auto;
-  width: 600px;
+  clear:both;
+  margin: auto;
+  width: 960px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
@@ -44,10 +45,39 @@ h2.main {
   height: 99%;
 }
 
+#logo {
+  float: left;
+  font-family: 'Lobster';
+  color: #91C46C;
+  font-size: 3em;
+  margin: 0px;
+  padding: 10px 10px 10px 0px;
+}
+
+#logo a:hover {
+  color: #91C46C;
+}
+
 nav {
+  float: right;
   width: 960px;
   margin: 0px auto;
-  background-color: blue;
+}
+
+nav a {
+  color: #91C46C;
+
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #C6E070;
+}
+
+.nav li {
+  font-family: 'Lato';
+  font-size: 1.2em;
+  padding: 18px;
 }
 
 .over {
@@ -65,8 +95,12 @@ ul {
   padding: 0px;
 }
 
-li#main {
+li {
   text-align: left;
   font:14px 'Lato',verdana,helvetica,arial,sans-serif;
   list-style: none;
+}
+
+::selection {
+  background-color: #C6E070;
 }

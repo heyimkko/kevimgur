@@ -45,6 +45,7 @@ CarrierWave.configure do |config|
   config.store_dir = "#{config.root}/uploads"
 end
 
+
 if development?
   cloudinary_config = YAML.load(File.read(APP_ROOT.join("config", "cloudinary.yml")))
   cloudinary_config.each { |key, value| ENV[key] = value }

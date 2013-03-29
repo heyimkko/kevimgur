@@ -9,11 +9,13 @@ post '/' do
   puts "%" * 100
   puts params
   puts "%" * 100
-  
+
   p = Photo.new
   p.photo_string = params['photo']
   p.user_id = current_user.id
   p.save!
+
+  Cloudinary::Uploader.upload(params['photo'], options = {})
 
   redirect "/i/#{p.short_url}"
 end
