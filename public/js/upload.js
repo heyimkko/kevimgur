@@ -23,10 +23,10 @@ $(document).ready(function(){
       $('#drop_zone').removeClass('over');
     }
 
-  function handleDragOver(evt) {
-    evt.stopPropagation();
-    evt.preventDefault();
-    evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+  function handleDragOver(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
   }
 
   function handleDragEnter(e) {
